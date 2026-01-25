@@ -1,0 +1,25 @@
+name: Workflow triggered manually
+
+on: 
+workflow_dispatch:
+  inputs:
+    education:
+      type: choice
+      description: Select place of education:
+      options: 
+        - school
+        - university
+        - college
+      message:
+        required: true
+
+jobs:
+  manually-triggered:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Display Message"
+        run: |
+          echo "The workflow was manually triggered:"
+          echo "Triggered by ${{ github.actor }}"
+          echo "${{ github.event.inputs.message }} -> ${{ github.event.inputs.education }}"
+
