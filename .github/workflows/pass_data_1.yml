@@ -21,3 +21,5 @@ jobs:
       - name: Show version (from output)
         run: |
           echo "The Message is: ${{ steps.shh_message.outputs.MESSAGE }}"
+
+
