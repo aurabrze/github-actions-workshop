@@ -11,9 +11,6 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - name: Lint Check
-        uses: npx standard
-       
       - name: Checkout code
         uses: actions/checkout@v4
 
@@ -27,6 +24,9 @@ jobs:
 
       - name: Run Tests
         run: npm test
+
+      - name: Lint Check
+        run: npx standard
 
   # # JOB 2: DEPLOY (Only runs if Test passes)
   # deploy:
