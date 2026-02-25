@@ -1,0 +1,14 @@
+name: New Issue Added
+
+on: 
+  issues:
+    types: [opened]
+
+jobs:
+  print-issue:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Display Message"
+        run: |
+          echo "YOU HATH MADE A NEW ISUE"
+          echo "The issue was made by ${{ github.actor }}"
