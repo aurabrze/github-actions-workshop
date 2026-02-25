@@ -1,0 +1,14 @@
+name: cowsies
+
+on:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Cowsays
+        uses: mscoutermarsh/cowsays-action@v1
+        with:
+          text: "YOOOO GANG"
+          color: "blue"
